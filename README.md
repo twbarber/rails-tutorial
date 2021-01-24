@@ -56,6 +56,16 @@ Completing the Rails Guide at https://guides.rubyonrails.org/getting_started.htm
 |`.gitignore`   |This file tells git which files (or patterns) it should ignore. See GitHub - Ignoring files for more info about ignoring files.   |
 |`.ruby-version`|This file contains the default Ruby version.  |
 
+## REST Mappings
+|HTTP Method | Path | Class Method | Description
+|GET |	/users |	index |	page to list all users|
+|GET |	/users/1 |	show |	page to show user with id 1|
+|GET |	/users/new |	new |	page to make a new user|
+|POST |	/users 	create |	|create a new user|
+|GET |	/users/1/edit |	edit |	page to edit user with id 1|
+|PATCH |	/users/1 |	update |	update user with id 1|
+|DELETE| 	/users/1 |	destroy |	delete user with id 1|
+
 
 ## Notes
 
@@ -184,3 +194,4 @@ By convention, partial files are prefixed with an underscore. You can read more 
  
      Your text editor: Most text editors (such as TextMate), default to saving files as UTF-8. If your text editor does not, this can result in special characters that you enter in your templates (such as é) to appear as a diamond with a question mark inside in the browser. This also applies to your i18n translation files. Most editors that do not already default to UTF-8 (such as some versions of Dreamweaver) offer a way to change the default to UTF-8. Do so.
      Your database: Rails defaults to converting data from your database into UTF-8 at the boundary. However, if your database is not using UTF-8 internally, it may not be able to store all characters that your users enter. For instance, if your database is using Latin-1 internally, and your user enters a Russian, Hebrew, or Japanese character, the data will be lost forever once it enters the database. If possible, use UTF-8 as the internal storage of your database.
+
