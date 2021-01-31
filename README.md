@@ -30,7 +30,15 @@ Completing the Rails Guide at https://guides.rubyonrails.org/getting_started.htm
 
 `rails generate model <name> <field>:<type> <record>:references`: Create a model class, and corresponding DB migration.
 
-`rails db:migrate`: Triggers Rails to execute the migration command. 
+`rails db:migrate`: Triggers Rails to execute the migration command.
+
+`rails db:rollback`: Undo execution of migrate
+
+`rails db:migrate VERSION=0`: Specify schema version to revert to
+
+`rails generate controller StaticPages home help`: Create StaticPages controller with home and help methods
+
+`rails destroy controller StaticPages home help`: Destroy StaticPages controller and methods
 
 ## Rails App Directory Structure
 
